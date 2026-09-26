@@ -1,0 +1,59 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "_meta": { "title": "Start frame (any image)" },
+    "inputs": { "image": "example.png" }
+  },
+  "2": {
+    "class_type": "RepeatImageBatch",
+    "_meta": { "title": "Stand-in for clip 1 (8 frames)" },
+    "inputs": { "image": ["1", 0], "amount": 8 }
+  },
+  "3": {
+    "class_type": "FXIFrameChainStep",
+    "_meta": { "title": "Frame Chain Step 1" },
+    "inputs": { "clip": ["2", 0], "offset_from_end": 0 }
+  },
+  "4": {
+    "class_type": "ImageInvert",
+    "_meta": { "title": "Make clip 2 look different" },
+    "inputs": { "image": ["3", 1] }
+  },
+  "5": {
+    "class_type": "RepeatImageBatch",
+    "inputs": { "image": ["4", 0], "amount": 7 }
+  },
+  "6": {
+    "class_type": "ImageBatch",
+    "_meta": { "title": "Stand-in for clip 2: starts on clip 1's last frame" },
+    "inputs": { "image1": ["3", 1], "image2": ["5", 0] }
+  },
+  "7": {
+    "class_type": "FXIFrameChainStep",
+    "_meta": { "title": "Frame Chain Step 2" },
+    "inputs": { "clip": ["6", 0], "offset_from_end": 0, "chain": ["3", 0] }
+  },
+  "8": {
+    "class_type": "FXIStitchClips",
+    "_meta": { "title": "Stitch Clips (15 frames: the seam duplicate is dropped)" },
+    "inputs": {
+      "chain": ["7", 0],
+      "drop_seam_frames": true,
+      "ramp_fast": 1.0,
+      "ramp_hold": 1.0,
+      "ramp_split": 0.5,
+      "resize": "error"
+    }
+  },
+  "9": {
+    "class_type": "SaveAnimatedWEBP",
+    "inputs": {
+      "images": ["8", 0],
+      "filename_prefix": "fxi-frame-chain/smoke-test",
+      "fps": 6.0,
+      "lossless": false,
+      "quality": 80,
+      "method": "default"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.env
+.env.*
+.DS_Store
+*.log
+*.mp4
+*.webm
+*.webp
+REVIEW_SUMMARY.md

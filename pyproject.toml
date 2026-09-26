@@ -1,0 +1,41 @@
+[project]
+name = "fxi-frame-chain"
+version = "0.1.0"
+description = "Frame chaining for AI video in ComfyUI: extract a clip's last frame, feed it to the next image-to-video generation, and stitch the clips into one seamless continuous shot (with optional speed ramp)."
+authors = [{ name = "FUELED BY IMAGINATION, LLC", email = "contact@fxi.studio" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.10"
+# No extra dependencies: only torch, which ComfyUI already provides.
+dependencies = []
+keywords = ["comfyui", "ai-video", "frame-chaining", "image-to-video", "video-generation", "seamless-video"]
+classifiers = [
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Repository = "https://github.com/fueledximagination/comfyui-fxi-frame-chain"
+Documentation = "https://github.com/fueledximagination/comfyui-fxi-frame-chain#readme"
+"Bug Tracker" = "https://github.com/fueledximagination/comfyui-fxi-frame-chain/issues"
+
+[tool.comfy]
+PublisherId = "fueledximagination"
+DisplayName = "FXI Frame Chain"
+Icon = "https://raw.githubusercontent.com/fueledximagination/comfyui-fxi-frame-chain/main/docs/icon.svg"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["fxi_frame_chain"]
+known-third-party = ["helpers"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

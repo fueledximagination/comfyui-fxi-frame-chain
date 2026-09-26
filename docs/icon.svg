@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label="FXI Frame Chain">
+  <rect width="400" height="400" rx="72" fill="#050505"/>
+  <g fill="none" stroke-width="14" stroke-linejoin="round">
+    <rect x="52" y="140" width="110" height="120" rx="14" stroke="#ffffff" stroke-opacity="0.35"/>
+    <rect x="145" y="140" width="110" height="120" rx="14" stroke="#ffffff" stroke-opacity="0.6"/>
+    <rect x="238" y="140" width="110" height="120" rx="14" stroke="#eecd2b"/>
+  </g>
+  <g fill="#eecd2b">
+    <rect x="145" y="140" width="17" height="120"/>
+    <rect x="238" y="140" width="17" height="120"/>
+  </g>
+</svg>
