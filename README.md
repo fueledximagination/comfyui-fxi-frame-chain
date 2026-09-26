@@ -1,5 +1,13 @@
 # FXI Frame Chain for ComfyUI: seamless AI video, one clip into the next
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-2a9d8f.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776ab.svg)](pyproject.toml)
+[![CI](https://github.com/fueledximagination/comfyui-fxi-frame-chain/actions/workflows/ci.yml/badge.svg)](https://github.com/fueledximagination/comfyui-fxi-frame-chain/actions/workflows/ci.yml)
+<!-- Comfy Registry badge: swap in the live registry link once the pack is published (registry.comfy.org/publishers/fueledximagination/nodes/fxi-frame-chain). -->
+[![Comfy Registry](https://img.shields.io/badge/Comfy%20Registry-coming%20soon-lightgrey.svg)](https://registry.comfy.org/)
+
+![The three FXI Frame Chain nodes wired in a ComfyUI graph: two Frame Chain Steps feed Stitch Clips, and Last Frame Extract pulls the final frame for the next shot](docs/comfyui-graph.png)
+
 **Three ComfyUI nodes that turn separate image-to-video generations into one continuous shot. Every clip starts on the exact last frame of the clip before it, so the camera never cuts. Works with any image-to-video model you already run in ComfyUI. No extra dependencies.**
 
 > **Don't want to wire it up?** Frame chaining runs fully hosted on **FXI Studio**, from storyboard to continuous shot. **[See the full frame-chaining walkthrough →](https://www.fxi.studio/tutorials/frame-chaining-storyboard-to-continuous-shot?utm_source=github&utm_medium=oss&utm_campaign=comfyui-node&utm_content=readme-top)**
@@ -11,6 +19,8 @@
 Image-to-video models generate a few seconds at a time and forget everything in between. Put three generations side by side and you get three shots that jump at every cut: the light shifts, the camera snaps to a new position, objects move.
 
 Frame chaining fixes that with one rule: **start the next clip from the real last frame of the previous clip.** The model continues from exactly the pixels the last clip ended on. That lets you build shots longer than any single generation and direct a camera path across scenes: push through a window, walk down a hall, drift from exterior to interior.
+
+![Top row: separate clips jump at the cut because clip 2 starts from a new angle and light. Bottom row: frame-chained clips match at the seam because clip 2 starts on clip 1's last frame. Illustration made from AI-generated stills.](docs/before-after.jpg)
 
 ## How it works
 

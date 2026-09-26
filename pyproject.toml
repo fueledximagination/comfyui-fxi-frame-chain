@@ -23,6 +23,8 @@ Documentation = "https://github.com/fueledximagination/comfyui-fxi-frame-chain#r
 [tool.comfy]
 PublisherId = "fueledximagination"
 DisplayName = "FXI Frame Chain"
+# Resolves only once this repo is public on GitHub (404 while private/unpublished).
+# Push to `main` before the first `comfy node publish` so the registry can fetch it.
 Icon = "https://raw.githubusercontent.com/fueledximagination/comfyui-fxi-frame-chain/main/docs/icon.svg"
 
 [tool.ruff]

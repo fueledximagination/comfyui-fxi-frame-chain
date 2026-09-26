@@ -2,3 +2,5 @@
 tests/
 .ruff_cache/
 .pytest_cache/
+docs/*.png
+docs/*.jpg
