@@ -3,8 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-2a9d8f.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776ab.svg)](pyproject.toml)
 [![CI](https://github.com/fueledximagination/comfyui-fxi-frame-chain/actions/workflows/ci.yml/badge.svg)](https://github.com/fueledximagination/comfyui-fxi-frame-chain/actions/workflows/ci.yml)
-<!-- Comfy Registry badge: swap in the live registry link once the pack is published (registry.comfy.org/publishers/fueledximagination/nodes/fxi-frame-chain). -->
-[![Comfy Registry](https://img.shields.io/badge/Comfy%20Registry-coming%20soon-lightgrey.svg)](https://registry.comfy.org/)
+[![Comfy Registry](https://img.shields.io/badge/Comfy%20Registry-fxi--frame--chain-blue.svg)](https://registry.comfy.org/nodes/fxi-frame-chain)
 
 ![The three FXI Frame Chain nodes wired in a ComfyUI graph: two Frame Chain Steps feed Stitch Clips, and Last Frame Extract pulls the final frame for the next shot](docs/comfyui-graph.png)
 
