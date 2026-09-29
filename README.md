@@ -15,6 +15,8 @@
 
 ## Why frame chaining
 
+> **New to the term?** Read the one-paragraph definition: **[What is frame chaining?](https://www.fxi.studio/glossary/frame-chaining?utm_source=github&utm_medium=oss&utm_campaign=comfyui-node&utm_content=readme-definition)** on FXI Studio.
+
 Image-to-video models generate a few seconds at a time and forget everything in between. Put three generations side by side and you get three shots that jump at every cut: the light shifts, the camera snaps to a new position, objects move.
 
 Frame chaining fixes that with one rule: **start the next clip from the real last frame of the previous clip.** The model continues from exactly the pixels the last clip ended on. That lets you build shots longer than any single generation and direct a camera path across scenes: push through a window, walk down a hall, drift from exterior to interior.
